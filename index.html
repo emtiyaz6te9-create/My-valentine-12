@@ -20,9 +20,6 @@ body{
     center/cover no-repeat;
   font-family:'Poppins',sans-serif;
   color:#fff; 
-  <audio id="bgMusic" loop>
-  <source src="VID_20260208_230033_154.mp3" type="audio/mpeg">
-</audio>
 }
 
 .card{
@@ -112,16 +109,9 @@ button:hover{transform:translateY(-3px)}
 </head>
 
 <body>
-
-<!-- HIDDEN YOUTUBE MUSIC -->
-<iframe
-  id="bgMusic"
-  width="0"
-  height="0"
-  src=""
-  allow="autoplay">
-</iframe>
-
+  <audio id="bgMusic" loop>
+  <source src="VID_20260208_230033_154.mp3" type="audio/mpeg">
+  </audio>
 <!-- SLIDE 1 -->
 <div class="card" id="s1">
   <h1>Will you be my Valentine 💍</h1>
@@ -222,6 +212,7 @@ button:hover{transform:translateY(-3px)}
   </div>
 </div>
 
+  }
 <script>
 let musicPlayed = false;
 
@@ -230,12 +221,10 @@ function go(n){
   document.getElementById('s'+n).classList.remove('hidden');
 
   if(!musicPlayed){
-    document.getElementById("bgMusic").src =
-      "https://www.youtube.com/embed/okjWEVarG1c?start=0&end=20&autoplay=1";
+    document.getElementById("bgMusic").play();
     musicPlayed = true;
   }
 }
 </script>
-
 </body>
 </html>
