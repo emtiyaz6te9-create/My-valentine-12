@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Valentine</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&family=Baloo+Da+2:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.75)),
+    url("https://i.postimg.cc/nhWqTtz2/476165222_1316737302908794_7744084926286260557_n_1316737299575461.jpg")
+    center/cover no-repeat;
+  font-family:'Poppins',sans-serif;
+  color:#fff;
+}
+
+.card{
+  width:92%;
+  max-width:430px;
+  padding:34px 28px;
+  text-align:center;
+  border-radius:26px;
+  background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+  backdrop-filter:blur(16px);
+  box-shadow:0 30px 70px rgba(0,0,0,.55);
+  animation:fade .6s ease;
+}
+.hidden{display:none}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  margin-bottom:14px;
+}
+
+p{
+  font-size:15px;
+  line-height:2;
+  opacity:.92;
+}
+
+button{
+  background:linear-gradient(135deg,#ff5f8a,#ff2f64);
+  border:none;
+  color:white;
+  padding:14px 38px;
+  border-radius:50px;
+  font-size:15px;
+  cursor:pointer;
+  margin-top:22px;
+  box-shadow:0 12px 35px rgba(255,77,122,.6);
+}
+button:hover{transform:translateY(-3px)}
+
+.quiz{
+  background:rgba(255,255,255,.18);
+  padding:14px;
+  border-radius:14px;
+  margin:12px 0;
+  cursor:pointer;
+}
+
+.letter-box{
+  background:rgba(255,255,255,.95);
+  color:#222;
+  padding:26px 24px;
+  border-radius:20px;
+  font-family:'Baloo Da 2', cursive;
+  font-size:20px;
+  line-height:2.3;
+  margin-top:12px;
+  max-height:60vh;
+  overflow-y:auto;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:14px;
+}
+.grid img{
+  width:100%;
+  height:130px;
+  object-fit:cover;
+  border-radius:16px;
+}
+
+.final-love{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  line-height:1.8;
+  text-shadow:0 0 15px #ff7fa5;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:scale(.94)}
+  to{opacity:1;transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HIDDEN YOUTUBE MUSIC -->
+<iframe
+  id="bgMusic"
+  width="0"
+  height="0"
+  src=""
+  allow="autoplay">
+</iframe>
+
+<!-- SLIDE 1 -->
+<div class="card" id="s1">
+  <h1>Will you be my Valentine 💍</h1>
+  <p>তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি।</p>
+  <button onclick="go(2)">YES</button>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="card hidden" id="s2">
+  <h1>Happy Valentine</h1>
+  <p>তোমার জন্য ছোট্ট একটা সারপ্রাইজ</p>
+  <button onclick="go(3)">Start Quiz</button>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="card hidden" id="s3">
+  <h1>এই সম্পর্কে বেশি ভালোবাসে কে?</h1>
+  <div class="quiz" onclick="go(4)">তুমি</div>
+  <div class="quiz" onclick="go(4)">আমি</div>
+  <div class="quiz" onclick="go(4)">দুজনেই</div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="card hidden" id="s4">
+  <h1>Only You</h1>
+  <p>এটা শুধু তোমার জন্য 💌</p>
+  <button onclick="go(5)">Read My Letter</button>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="card hidden" id="s5">
+  <h1>My Letter For You</h1>
+
+  <div class="letter-box">
+    তুমি আমার জীবনে ঠিক তেমনই এক পরিবর্তন—<br>
+    যার পরে আমি আর আগের মতো নেই।<br><br>
+
+    তোমার সাথে থাকার পর আমি শিখেছি,<br>
+    নীরবতাও কথা বলতে পারে,<br>
+    একটা চোখের চাহনিতেই<br>
+    হাজারটা অনুভূতি লুকিয়ে থাকতে পারে।<br><br>
+
+    তুমি যখন পাশে থাকো,<br>
+    সময় থেমে যায় না—<br>
+    বরং সময়টা অর্থ খুঁজে পায়।<br>
+    দিনের শেষে ক্লান্ত শরীর নিয়েও<br>
+    মনটা অদ্ভুত শান্তিতে ভরে যায়।<br><br>
+
+    তোমার হাসিটা আমার কাছে শুধু হাসি না,<br>
+    ওটা আমার আশ্রয়।<br>
+    আর তোমার কষ্টগুলো—<br>
+    আমার দায়িত্ব।<br><br>
+
+    আমি জানি না ভবিষ্যৎ কেমন হবে,<br>
+    জীবন কতটা সহজ বা কঠিন হবে—<br>
+    কিন্তু আমি এটুকু জানি,<br>
+    তোমাকে ছাড়া কোনো আগামী<br>
+    আমি কল্পনাও করতে পারি না।<br><br>
+
+    হয়তো ঝগড়া হবে,<br>
+    অভিমান জমবে,<br>
+    তবু প্রতিটা অভিমানের শেষে<br>
+    আমি আবারও তোমাকেই বেছে নেব।<br><br>
+
+    কারণ তুমি শুধু ভালোবাসা নও,<br>
+    তুমি আমার ঘর,<br>
+    তুমি আমার শান্তি,<br>
+    তুমি সেই মানুষ—<br>
+    যার হাত ধরলে ভয়গুলো ছোট হয়ে যায়।<br><br>
+
+    আজ নয়,<br>
+    কাল নয়,<br>
+    সারাজীবন—<br>
+    আমি শুধু তোমাকেই বেছে নেব।
+  </div>
+
+  <button onclick="go(6)">Our Memories</button>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="card hidden" id="s6">
+  <h1>Our Memories</h1>
+  <div class="grid">
+    <img src="https://i.postimg.cc/nhWqTtz2/476165222_1316737302908794_7744084926286260557_n_1316737299575461.jpg">
+    <img src="https://i.postimg.cc/zfRKcPbF/474918891_535249966200701_6069689507161133508_n_535249962867368.jpg">
+    <img src="https://i.postimg.cc/LsZLb0YV/474727586_1132974901951764_5015681432837694712_n_1132974898618431.jpg">
+    <img src="https://i.postimg.cc/XvydzDGw/474539449_1131644608084366_6903269367840811080_n_1131644604751033.jpg">
+  </div>
+  <button onclick="go(7)">One Last Thing</button>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="card hidden" id="s7">
+  <div class="final-love">
+    I loveeee youuuuuuu<br>
+    soooooo muchhhhh<br>
+    Tahitaa ❤️
+  </div>
+</div>
+
+<script>
+let musicPlayed = false;
+
+function go(n){
+  document.querySelectorAll('.card').forEach(c=>c.classList.add('hidden'));
+  document.getElementById('s'+n).classList.remove('hidden');
+
+  if(!musicPlayed){
+    document.getElementById("bgMusic").src =
+      "https://www.youtube.com/embed/okjWEVarG1c?start=0&end=20&autoplay=1";
+    musicPlayed = true;
+  }
+}
+</script>
+
+</body>
+</html>
